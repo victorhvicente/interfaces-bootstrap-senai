@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: rgb(185, 185, 185);
+        }
+    </style>
+    <title>Bootstrap Formulário</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulário no Bootstrap</h1>
+        <hr>
+        <form action="" class="row">
+            <div class="mb-3 col-lg-6 col-sm-12">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite aqui" required>
+            </div>
+            
+            <div class="mb-3 col-lg-6 col-sm-12">
+                <label for="sobrenome" class="form-label">Sobrenome</label>
+                <input type="text" class="form-control" for="sobrenome" id="sobrenome" name="sobrenome" placeholder="Digite aqui" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="curso" class="form-label">Curso</label>
+                <select class="form-select" name="curso" id="curso">
+                    <option value="">Selecione</option>
+                    <option value="js">JavaScript</option>
+                    <option value="c#">C-Sharp</option>
+                    <option value="bs">Bootstrap</option>
+                </select>
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" name="termos" id="termos">
+                <label for="termos" class="form-check-label">Aceitar os termos</label>
+            </div>
+
+            <div class="form-check form-switch m">
+                <input type="checkbox" class="form-check-input" name="termos2" id="termos2">
+                <label for="termos2" class="form-check-label">Aceitar os termos</label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="masculino">
+                <label for="masculino" class="form-check-label">Masculino</label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="feminino">
+                <label for="feminino" class="form-check-label">Feminino</label>
+            </div>
+
+            <div class="form-check">
+                <input type="radio" class="form-check-input" name="genero" id="outros">
+                <label for="outros" class="form-check-label">Outros</label>
+            </div>
+
+            <div class="mb-3">
+                <label for="avaliacao" class="form-label">Avaliação</label>
+                <input type="range" class="form-range" name="avaliacao" id="avaliacao" min="0" max="100">
+                <span id="valor-avaliacao">0</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div class="row mb-3 mt-3">
+                <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-sm" id="colFormLabelSm" placeholder="col-form-label-sm">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="colFormLabel" placeholder="col-form-label">
+                </div>
+              </div>
+              <div class="row">
+                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="col-form-label-lg">
+                </div>
+              </div>
+
+              <div class="row g-3">
+                <div class="col-sm-7">
+                  <input type="text" class="form-control" placeholder="City" aria-label="City">
+                </div>
+                <div class="col-sm">
+                  <input type="text" class="form-control" placeholder="State" aria-label="State">
+                </div>
+                <div class="col-sm">
+                  <input type="text" class="form-control" placeholder="Zip" aria-label="Zip">
+                </div>
+              </div>
+
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script>
+        // Seleciona o input e o elemento onde o valor será exibido
+        const inputAvaliacao = document.getElementById('avaliacao');
+        const valorAvaliacao = document.getElementById('valor-avaliacao');
+
+        // Função para atualizar o valor mostrado
+        inputAvaliacao.addEventListener('input', function() {
+            valorAvaliacao.textContent = inputAvaliacao.value; // Atualiza o valor exibido
+        });
+
+    </script>
+
+</body>
+</html>
