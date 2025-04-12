@@ -15,15 +15,20 @@
     <div class="container">
         <h1>Formulário no Bootstrap</h1>
         <hr>
-        <form action="" class="row">
+        <form action="" class="row was-validated">
+
             <div class="mb-3 col-lg-6 col-sm-12">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite aqui" required>
+                <div class="invalid-feedback">Por favor, informe seu nome </div>
+                <div class="valid-feedback">Parabéns, você informou seu nome </div>
             </div>
             
             <div class="mb-3 col-lg-6 col-sm-12">
                 <label for="sobrenome" class="form-label">Sobrenome</label>
                 <input type="text" class="form-control" for="sobrenome" id="sobrenome" name="sobrenome" placeholder="Digite aqui" required>
+                <div class="invalid-feedback">Por favor, informe seu nome </div>
+                <div class="valid-feedback">Parabéns, você informou seu nome </div>
             </div>
 
             <div class="mb-3">
